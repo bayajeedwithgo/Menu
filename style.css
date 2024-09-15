@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .navbar-area, .input-area{
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+} */
+.navbar{
+    margin-top: 2%;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
+ul li{
+    background-color:#636268;
+    border-right: 2px solid gray;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+    /* 
+    -same width er jonno width and disply block
+    -hints: jokhon amara vartically manu banabo tokhon use korle vlo
+    width: 150px;
+    display: block; 
+    */
+}
+ul li:hover{
+    background-color: hsl(6, 99%, 68%);
+    transition: all 0.35s;
+}
+ul li a{            
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    /* same width er jonno width and disply block */
+    /* hints: jokhon amara vartically manu banabo tokhon use korle vlo */
+    /* 
+    width: 150px;
+    display: block; 
+    */
+    text-align: center;
+}
+li:last-child{
+    border-right: none;
+}
+
+.dropdown{
+    position: absolute;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+ul li:hover .dropdown{
+    display: block;
+    transition: 2s;
+
+}
+.dropdown li{
+    position: relative;
+}
+.sports{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    left: 100%;
+    top:0;
+    display: none;
+}
+.dropdown li:hover .sports{
+    display: block;
+}
+.dropdown li:nth-child(4)::after{
+    content: "*";
+    color: #fff;
+}
